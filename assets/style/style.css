@@ -399,15 +399,34 @@ padding-bottom: 20px;
 .support-container{
   display: flex;
   min-width: 500px;
+  justify-content: space-evenly;
+}
+
+.support-arrow-img{
+  display: flex;
 }
 .support-img{
   display: flex;
+  order:0;
 }
 .support-text{
+  position: relative;
   display:flex;
   flex-direction: column;
   max-width:393px;
-  
+  align-self: center;
+}
+
+.right-arrow{
+  position: absolute;
+  bottom: -63px;
+  align-self: end;
+  left: 253px;
+}
+
+.right-arrow img{
+  max-width: 229px;
+  max-height: 66px;
 }
 
 .arrow-container{
