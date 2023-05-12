@@ -72,7 +72,10 @@ p{
 a {
   text-decoration: none;
   font-family: secondary-font;
+  color:inherit;
+  cursor: pointer;
 }
+
 
 img {
   max-width: 100%;
@@ -189,16 +192,19 @@ img {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
+  min-width: 310px;
 }
 
 .trip-button {
   padding: 0 8px 0 0;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .trip-button img {
   padding: 0 10px 0 0;
+  cursor: pointer;
 }
 
 .banner-button-container .get-started-button, .use-buttons {
@@ -211,6 +217,22 @@ img {
   align-items: center;
   padding: 8px 24px;
   gap: 8px;
+  cursor: pointer;
+}
+
+.banner-button-container:hover, .get-started-button:hover, .use-buttons:hover, .support-button:hover{
+  background-color: var(--secondary-color-b);
+  color: var(--secondary-color-w);
+}
+
+.sign-up:hover{
+  color:var(--secondary-color-w);
+  background:var(--secondary-color-b)
+}
+
+.sign-in:hover{
+  color:var(--secondary-color-w);
+  background:var(--secondary-color-b);
 }
 
 .background-wave img{
@@ -344,6 +366,11 @@ align-self: center;
 padding-bottom: 20px;
 }
 
+.buttons-white:hover{
+  background-color: var(--secondary-color-b);
+  color: var(--secondary-color-w);
+}
+
 
 /* End of USe Peyme CSS */
 /* Features Card Container Css */
@@ -398,8 +425,10 @@ padding-bottom: 20px;
 
 .support-container{
   display: flex;
-  min-width: 500px;
+  min-width: 300px;
   justify-content: space-evenly;
+  align-items: center;
+  margin-top: 95px;
 }
 
 .support-arrow-img{
@@ -415,6 +444,7 @@ padding-bottom: 20px;
   flex-direction: column;
   max-width:393px;
   align-self: center;
+  justify-content: center;
 }
 
 .right-arrow{
@@ -423,10 +453,18 @@ padding-bottom: 20px;
   align-self: end;
   left: 253px;
 }
-
-.right-arrow img{
-  max-width: 229px;
-  max-height: 66px;
+.support-button{    
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  padding: 8px 24px;
+  gap: 10px;
+  max-width: 150px;
+  max-height: 36px;
+  color:var(--secondary-color-w);
+  background-color: var(--primary-button-color);
+  border-radius: var(--button-radius);
+  margin-top: 10px;
 }
 
 .arrow-container{
@@ -435,10 +473,8 @@ padding-bottom: 20px;
   justify-content: space-between;
 }
 
-.arrow-container .small-arrow{
-  min-width:52px;
-  min-height: 26px;
-  align-self: flex-end;
+.support-img img{
+  max-width: 60%;
 
 }
 
@@ -446,11 +482,13 @@ padding-bottom: 20px;
 
 /* Partner Container Css */
 .partners-containers{
+  background:linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 11.46%, rgba(255, 255, 255, 0) 45.83%, rgba(255, 255, 255, 0) 88.02%, #FFFFFF 100%);
   margin: 0 auto;
   text-align: center;
   margin-top: 100px;
   max-width: 1200px;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .partners-containers h2{
@@ -527,6 +565,7 @@ footer {
     height: 36px;
     background: var(--secondary-color-w);
     font-family: secondary-font;
+    color:var(--primary-color)
   }
 
 
@@ -656,16 +695,17 @@ footer {
     margin-top: 20px;
     flex-wrap: wrap;
     min-width: 451px;
+    align-self: center;
   }
 
-  /* .background-wave {
-    display: none;
-  } */
   .banner h1 {
     font-size: 24px;
   }
   .banner-img {
     align-self: center;
+  }
+  .banner-text{
+    min-height: 126px;
   }
 
   .triangle {
@@ -706,6 +746,12 @@ padding-bottom: 20px;
 
   .logo-copy p{
     min-width: 220px;
+  }
+
+  .support-container{
+    text-align: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
   }
 }
 /* ***********************Mobile***********************/
@@ -763,6 +809,7 @@ h1{
 
   .banner-button-container {
     margin-top: 22px;
+    max-width: 25px;
   }
 
   .triangle {
@@ -794,6 +841,16 @@ text-align: center;
 .card-container{
   justify-content: space-evenly;
   }
+
+  .support-container{
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .support-text{
+   text-align: center;
+  }
+
 /* Footer CSS */
   .footer-container{
     padding:26px 50px; 
